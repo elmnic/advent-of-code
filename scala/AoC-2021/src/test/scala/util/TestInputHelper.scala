@@ -1,3 +1,5 @@
+package util
+
 import java.nio.file.{Files, Path, Paths}
 
 object TestInputHelper {

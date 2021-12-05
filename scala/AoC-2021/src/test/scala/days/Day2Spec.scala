@@ -1,5 +1,9 @@
-import days.Day2
+package days
 
+import org.scalatest.DoNotDiscover
+import util.TestInputHelper
+
+@DoNotDiscover
 class Day2Spec extends BaseTest {
 
   behavior of "Day2"
@@ -9,6 +13,13 @@ class Day2Spec extends BaseTest {
       case Left(msg) => fail(msg)
       case Right(input) => input
     }
-    Day2.solve(testInput) shouldBe(150, 900)
+    val (part1, part2) = Day2.solve(testInput)
+
+    withClue("Part1: ") {
+      part1 shouldBe 150
+    }
+    withClue("Part2: ") {
+      part2 shouldBe 900
+    }
   }
 }

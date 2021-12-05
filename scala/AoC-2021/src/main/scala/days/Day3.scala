@@ -24,7 +24,7 @@ object Day3 {
     val resultPart1 = gammaRate * epsilonRate
     val resultPart2 = 0
 
-    println(s"Day 3 - part 1: ${resultPart1}, part 2: $resultPart2")
+    println(s"Day 3\n\tpart 1: $resultPart1\n\tpart 2: $resultPart2")
     (resultPart1, resultPart2)
   }
 }
