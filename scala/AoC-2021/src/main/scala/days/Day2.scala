@@ -1,11 +1,13 @@
 package days
 
-object Day2 {
+class Day2 {
 
   private case class Point(x: Int, y: Int)
 
   def solve(input: Seq[String]): (Int, Int) = {
+
     val extractCommand = """(.+) (\d+)""".r
+
     val resultPart1 =
       input.map { case extractCommand(direction, units) =>
         direction -> units.toInt
@@ -25,7 +27,6 @@ object Day2 {
       }
 
     val resultPart2 = 0
-    println(s"Day 2\n\tpart 1: $resultPart1\n\tpart 2: $resultPart2")
     (resultPart1, resultPart2)
   }
 }

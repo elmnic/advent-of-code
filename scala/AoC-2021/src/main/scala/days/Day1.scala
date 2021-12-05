@@ -1,6 +1,6 @@
 package days
 
-object Day1 {
+class Day1 {
   def solve(input: Seq[String]): (Int, Int) = {
 
     val resultPart1 = input.map(_.toInt)

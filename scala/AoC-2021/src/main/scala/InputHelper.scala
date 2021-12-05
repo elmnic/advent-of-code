@@ -3,17 +3,17 @@ import scalaj.http.Http
 import java.nio.file.{Files, Path, Paths}
 import scala.util.chaining.scalaUtilChainingOps
 
-class InputHelper(verbose: Boolean) {
+object InputHelper {
 
   private val directory = "src/main/resources"
 
   def getInput(day: String): Seq[String] = {
     if (Files.isRegularFile(Paths.get(s"$directory/day$day.in"))) {
-      if (verbose) println("File exists, getting cached input")
+      // File exists, getting cached input
       getCached(day)
     }
     else {
-      if (verbose) println("File not cached, sending request and caching input")
+      // File not cached, sending request and caching input
       Http(s"https://adventofcode.com/2021/day/$day/input")
         .cookie("session", System.getenv("AOC_TOKEN"))
         .asString
@@ -27,7 +27,7 @@ class InputHelper(verbose: Boolean) {
 
   private def cacheInput(day: String, input: Seq[String]): Unit = {
     val path = Path.of(s"$directory/day$day.in")
-    if (verbose) println(s"Writing file to path: ${path.toAbsolutePath}")
+    // Writing input to file in resources
     Files.write(path, input.mkString("\n").getBytes)
   }
 }

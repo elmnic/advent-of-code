@@ -13,7 +13,7 @@ class Day1Spec extends BaseTest {
       case Left(msg) => fail(msg)
       case Right(input) => input
     }
-    val (part1, part2) = Day1.solve(testInput)
+    val (part1, part2) = new Day1().solve(testInput)
 
     withClue("Part1: ") {
       part1 shouldBe 7
