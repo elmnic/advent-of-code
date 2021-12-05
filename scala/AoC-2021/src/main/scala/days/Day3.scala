@@ -4,21 +4,7 @@ import scala.util.chaining.scalaUtilChainingOps
 
 object Day3 {
 
-  def solve(input: Seq[String]): Unit = {
-
-    val testInput =
-      """00100
-        |11110
-        |10110
-        |10111
-        |10101
-        |01111
-        |00111
-        |11100
-        |10000
-        |11001
-        |00010
-        |01010""".stripMargin.split("\n").toList
+  def solve(input: Seq[String]): (Int, Int) = {
 
     val gammaRate =
       input
@@ -39,5 +25,6 @@ object Day3 {
     val resultPart2 = 0
 
     println(s"Day 3 - part 1: ${resultPart1}, part 2: $resultPart2")
+    (resultPart1, resultPart2)
   }
 }

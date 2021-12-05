@@ -5,7 +5,7 @@ import scala.util.chaining.scalaUtilChainingOps
 
 class InputHelper(verbose: Boolean) {
 
-  private val directory = "src/main/scala/days"
+  private val directory = "src/main/resources"
 
   def getInput(day: String): Seq[String] = {
     if (Files.isRegularFile(Paths.get(s"$directory/day$day.in"))) {

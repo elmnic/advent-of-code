@@ -1,8 +1,7 @@
 package days
 
 object Day1 {
-  def solve(input: Seq[String]): Unit = {
-    val testInput = Seq(199, 200, 208, 210, 200, 207, 240, 269, 260, 263)
+  def solve(input: Seq[String]): (Int, Int) = {
 
     val resultPart1 = input.map(_.toInt)
       .sliding(2)
@@ -21,5 +20,6 @@ object Day1 {
       .sum
 
     println(s"Day 1 - part 1: $resultPart1, part 2: $resultPart2")
+    (resultPart1, resultPart2)
   }
 }
