@@ -19,7 +19,6 @@ class Day1 {
       }
       .sum
 
-    println(s"Day 1\n\tpart 1: $resultPart1\n\tpart 2: $resultPart2")
     (resultPart1, resultPart2)
   }
 }
