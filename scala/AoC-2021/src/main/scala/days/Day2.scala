@@ -17,7 +17,6 @@ class Day2 {
         direction -> units.toInt
       }.groupBy(_._1)
         .map { case (direction, values) => direction -> values.map(_._2).sum }
-        .toList
         .map {
           case ("forward", units) => Point(units, 0)
           case ("down", units) => Point(0, units)
