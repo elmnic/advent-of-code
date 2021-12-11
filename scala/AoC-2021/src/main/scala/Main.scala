@@ -6,11 +6,11 @@ object Main extends App {
 
   private def runSolve(day: String): Unit =
     Class.forName(s"days.Day$day")
-      .getDeclaredConstructor()
-      .newInstance()
-      .asInstanceOf[ {def solve(input: Seq[String]): (Int, Int)}]
-      .solve(InputHelper.getInput(day))
-      .pipe { case (p1, p2) => print(p1, p2, day) }
+         .getDeclaredConstructor()
+         .newInstance()
+         .asInstanceOf[ {def solve(input: Seq[String]): (Int, Int)}]
+         .solve(InputHelper.getInput(day))
+         .pipe { case (p1, p2) => print(p1, p2, day) }
 
   private def print(part1: Int, part2: Int, day: String): Unit =
     println(s" ~~~ Day $day ~~~\npart 1: $part1\npart 2: $part2")
