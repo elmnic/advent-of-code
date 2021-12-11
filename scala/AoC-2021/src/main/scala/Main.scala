@@ -16,7 +16,7 @@ object Main extends App {
     println(s" ~~~ Day $day ~~~\npart 1: $part1\npart 2: $part2")
 
   private def runAllSolves(): Unit = {
-    for (dayNr <- 1 to 4) {
+    for (dayNr <- 1 to 6) {
       runSolve(dayNr.toString)
     }
   }
