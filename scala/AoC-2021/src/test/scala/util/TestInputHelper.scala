@@ -2,7 +2,7 @@ package util
 
 import java.nio.file.{Files, Path, Paths}
 
-object TestInputHelper {
+trait TestInputHelper {
 
   private val testDirectory = "src/test/resources"
 

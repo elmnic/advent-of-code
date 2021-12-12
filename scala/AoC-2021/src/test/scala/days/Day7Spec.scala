@@ -1,13 +1,9 @@
 package days
 
-import org.scalatest.DoNotDiscover
-import util.TestInputHelper
-
-@DoNotDiscover
 class Day7Spec extends BaseTest {
 
   "Day7" should "return the sample output given the sample input" in {
-    val testInput = TestInputHelper.getTestInput("7") match {
+    val testInput = getTestInput("7") match {
       case Left(msg)    => fail(msg)
       case Right(input) => input
     }
@@ -17,7 +13,7 @@ class Day7Spec extends BaseTest {
       part1 shouldBe 37
     }
     withClue("Part2: ") {
-      part2 shouldBe 5
+      part2 shouldBe 168
     }
   }
 }

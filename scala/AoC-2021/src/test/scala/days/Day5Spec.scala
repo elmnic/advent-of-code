@@ -1,15 +1,9 @@
 package days
 
-
-import org.scalatest.DoNotDiscover
-import util.TestInputHelper
-
-@DoNotDiscover
 class Day5Spec extends BaseTest {
 
   "Day5" should "return the sample output given the sample input" in {
-
-    val testInput = TestInputHelper.getTestInput("5") match {
+    val testInput = getTestInput("5") match {
       case Left(msg)    => fail(msg)
       case Right(input) => input
     }
