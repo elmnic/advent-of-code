@@ -27,7 +27,7 @@ class Day4 {
       .tap(_ => println())
   }
 
-  def solve(input: Seq[String]): (Int, Int) = {
+  def solve(input: Seq[String]): (Long, Long) = {
     def markNumbers(board: Board, numberToMark: Int): Board = {
       Board(board.numbers.map {
         case MarkableNumber(number, mark) =>

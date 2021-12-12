@@ -14,10 +14,10 @@ class Day6Spec extends BaseTest {
     val (part1, part2) = new Day6().solve(testInput)
 
     withClue("Part1: ") {
-      part1 shouldBe 7
+      part1 shouldBe 5934
     }
     withClue("Part2: ") {
-      part2 shouldBe 5
+      part2 shouldBe 26984457539L
     }
   }
 }

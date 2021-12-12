@@ -5,7 +5,7 @@ import scala.util.chaining.scalaUtilChainingOps
 
 class Day3 {
 
-  def solve(input: Seq[String]): (Int, Int) = {
+  def solve(input: Seq[String]): (Long, Long) = {
 
     val gammaRate =
       input

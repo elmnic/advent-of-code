@@ -8,11 +8,11 @@ object Main extends App {
     Class.forName(s"days.Day$day")
          .getDeclaredConstructor()
          .newInstance()
-         .asInstanceOf[ {def solve(input: Seq[String]): (Int, Int)}]
+         .asInstanceOf[ {def solve(input: Seq[String]): (Long, Long)}]
          .solve(InputHelper.getInput(day))
          .pipe { case (p1, p2) => print(p1, p2, day) }
 
-  private def print(part1: Int, part2: Int, day: String): Unit =
+  private def print(part1: Long, part2: Long, day: String): Unit =
     println(s" ~~~ Day $day ~~~\npart 1: $part1\npart 2: $part2")
 
   private def runAllSolves(): Unit = {

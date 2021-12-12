@@ -1,7 +1,7 @@
 package days
 
 class Day1 {
-  def solve(input: Seq[String]): (Int, Int) = {
+  def solve(input: Seq[String]): (Long, Long) = {
 
     val resultPart1 = input
       .map(_.toInt)

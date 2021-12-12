@@ -8,7 +8,7 @@ class Day2 {
 
   private case class Command(direction: String, units: Int)
 
-  def solve(input: Seq[String]): (Int, Int) = {
+  def solve(input: Seq[String]): (Long, Long) = {
 
     val extractCommand = """(.+) (\d+)""".r
 

@@ -11,7 +11,7 @@ class Day5 {
 
   case class Board(points: Seq[Seq[Point]])
 
-  def solve(input: Seq[String]): (Int, Int) = {
+  def solve(input: Seq[String]): (Long, Long) = {
 
     def getRange(start: Int, end: Int) = Range.inclusive(start, end, if (start > end) -1 else 1)
 
