@@ -10,11 +10,9 @@ trait TestInputHelper {
     val path = Paths.get(s"$testDirectory/day$day.sample")
     if (Files.isRegularFile(path)) {
       getTestCached(day)
-    }
-    else {
+    } else {
       val filePath = Files.createFile(path)
-      Left(
-        s"""Sample input does not exist, please copy and paste the sample
+      Left(s"""Sample input does not exist, please copy and paste the sample
          input into "${filePath.toFile}" in the test folder""")
     }
   }
@@ -23,8 +21,7 @@ trait TestInputHelper {
     val path = Path.of(s"$testDirectory/day$day.sample")
     val sampleInput = Files.readString(path).split("\n").toSeq
     if (sampleInput.mkString.isEmpty) {
-      Left(
-        s""""${path.toFile}" is empty, please copy and paste the sample input into it""")
+      Left(s""""${path.toFile}" is empty, please copy and paste the sample input into it""")
     } else {
       Right(sampleInput)
     }

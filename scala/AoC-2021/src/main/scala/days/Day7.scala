@@ -13,15 +13,11 @@ class Day7 {
 
     val startPositions = input.flatMap(_.split(",").map(_.toInt))
 
-    val resultPart1 = startPositions
-      .max.pipe(x => Range.inclusive(0, x))
-      .map(position => toFuel(startPositions, position))
-      .min
+    val resultPart1 =
+      startPositions.max.pipe(x => Range.inclusive(0, x)).map(position => toFuel(startPositions, position)).min
 
-    val resultPart2 = startPositions
-      .max.pipe(x => Range.inclusive(0, x))
-      .map(position => toFuel2(startPositions, position))
-      .min
+    val resultPart2 =
+      startPositions.max.pipe(x => Range.inclusive(0, x)).map(position => toFuel2(startPositions, position)).min
 
     (resultPart1, resultPart2)
   }
