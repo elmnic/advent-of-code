@@ -7,8 +7,8 @@ mod utils;
 
 fn main() {
     let day_number = "2";
-    // let file_name = format!("src/inputs/example{day_number}.txt");
     let file_name = format!("src/inputs/input{day_number}.txt");
+    // let file_name = format!("src/inputs/input{day_number}.txt");
     let contents =
         fs::read_to_string(file_name).expect("Something went wrong reading the file");
 
